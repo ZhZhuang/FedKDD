@@ -1,0 +1,30 @@
+save_dir: save
+name: KT-pFL    # 实验名称
+n_clients: 10
+noniid: True  # True
+alpha: 1.0  # Dirichlet 分布参数
+dirichlet: False # dirichlet作为 noniid_2
+dataset_path: data  # /home/user/PycharmProjects/data/cifar
+dataset: Cifar10   # Cifar10  # FashionMNIST
+classes: 10
+batch_size: 64
+lr:  0.001
+round: 100
+local_epoch: 1
+
+KT_pFL_params:
+  public_num: 5000    # 10000
+  Temp: 2.0
+  N_alignment: 512
+  logits_matching_batchsize: 128
+  min_delta: 0.005,
+  penalty_ratio:  0.001
+  num_workers: 4
+  N_logits_matching_round: 1
+  batch_size: 64
+
+
+
+
+resume: False
+overwrite: True

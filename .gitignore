@@ -1,0 +1,15 @@
+*.pyc
+*~
+__pycache__
+.idea/
+.DS_Store
+data/
+data_gen/
+data_public/
+./
+#data_statistics/
+
+saved_models/
+save/
+
+

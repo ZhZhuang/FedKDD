@@ -1,0 +1,19 @@
+save_dir: save
+name: FedProx          # 实验名称
+n_clients: 10
+noniid: True          # True
+dirichlet: False      # dirichlet作为 noniid_2
+alpha: 1.0            # Dirichlet 分布参数
+dataset_path: data    # /home/user/PycharmProjects/data/cifar
+dataset: Cifar10      # Cifar10  # FashionMNIST
+classes: 10
+batch_size: 64
+lr:  0.001
+round: 100
+local_epoch: 1         # 2
+
+fedprox:
+  mu: 0.01  # 0.001 没效果  # 0.05 太大   # 0.01（default）  0.1太大  # proximal term constant
+
+resume: False
+overwrite: True

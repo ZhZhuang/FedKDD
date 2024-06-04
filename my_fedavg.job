@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#SBATCH -J FedAvg
+#SBATCH -p gpu
+#SBATCH -N 1
+#SBATCH -n 15
+#SBATCH --gres=gpu:1
+#SBATCH -o result/output.log
+#SBATCH -e result/error.log
+
+
+cd  $SLURM_SUBMIT_DIR
+NP=$SLURM_JOB_GPUS
+
+CUDA_VISIBLE_DEVICES=$NP sh run-fedavg.sh > result/log.log

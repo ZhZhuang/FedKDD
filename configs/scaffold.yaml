@@ -1,0 +1,18 @@
+save_dir: save
+name: Scaffold          # 实验名称
+n_clients: 10
+noniid: True          # True
+dirichlet: False      # dirichlet作为 noniid_2
+alpha: 100.0            # Dirichlet 分布参数   1.0
+dataset_path: data    # /home/user/PycharmProjects/data/cifar
+dataset: Cifar10      # Cifar10  # FashionMNIST
+classes: 10
+batch_size: 64
+lr:  0.001
+round: 100
+local_epoch: 1        # 1， 5 补偿计算上的不足
+
+rho: 0  # fednova中的参数
+
+resume: False
+overwrite: True
